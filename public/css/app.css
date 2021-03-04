@@ -1,0 +1,15 @@
+.hideClass{
+    display: none;
+}
+.baught{
+    text-decoration: line-through;
+}
+.items:hover{
+    background: antiquewhite;
+}
+
+@media screen and (min-width: 768px) {
+    #shoppingList{
+        padding: 10px 26%;
+    }
+}
