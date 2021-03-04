@@ -1,13 +1,39 @@
+body{
+    margin-top: 4%;
+    font-family: Akaya Telivigala;
+    font-size: 140%;
+    background: #9796f0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#content{
+    margin-top:80px;
+    letter-spacing: 1px;
+}
+h1{
+    font-family: Satisfy;
+}
 .hideClass{
     display: none;
 }
 .baught{
     text-decoration: line-through;
 }
+#deleteButton{
+    text-decoration: solid;
+    letter-spacing: 2px;
+    font-size: bold;
+    margin-bottom: 0%;
+}
+.items{
+    border-radius: 5px;
+}
+.deleteItem{
+    margin-left: 10px;
+}
 .items:hover{
     background: antiquewhite;
 }
-
 @media screen and (min-width: 768px) {
     #shoppingList{
         padding: 10px 26%;
