@@ -4,7 +4,6 @@ if(isset($_POST['item'])){
     $name = $_POST['item'];
     $ammount = $_POST['ammount'];
     $sql = "INSERT INTO `listy`.`shoping_list` (`name`, `ammount`) VALUES ('$name', '$ammount');";
-    
     if($con->query($sql)==false){
         echo "Error: $sql <br> $con->error";
     }
@@ -14,17 +13,13 @@ elseif(isset($_POST['method'])){
     $con = mysqli_connect("localhost", "root", "", "listy", "3308") or die(mysqli_error($con));
     if($_POST['method'] == 'deleteList'){
         $sql = "TRUNCATE TABLE `listy`.`shoping_list`;";
-        if($con->query($sql)==true){
-            echo 'successfully deleted';
-        }else{
+        if($con->query($sql)==false){
             echo "Error: $sql <br> $con->error";
         }
     }elseif($_POST['method'] == 'deleteItem'){
         $id = $_POST['id'];
         $sql = "DELETE FROM `listy`.`shoping_list` WHERE id = '$id';";
-        if($con->query($sql)==true){
-            echo 'successfully deleted';
-        }else{
+        if($con->query($sql)==false){
             echo "Error: $sql <br> $con->error";
         }
     }
